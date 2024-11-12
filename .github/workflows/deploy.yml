@@ -1,0 +1,16 @@
+name: my seconkd react workflow
+on: push
+jobs: 
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get code checkout
+        uses: actions/checkout@v3
+      - name: Install node JS
+        uses: actions:/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm ci
+      - name: Run Tests
+        run: npm test
