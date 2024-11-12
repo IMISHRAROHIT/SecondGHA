@@ -1,5 +1,5 @@
 name: my seconkd react workflow
-on: push
+on: [push, workflow_dispatch]
 jobs: 
   Build:
     runs-on: ubuntu-latest
